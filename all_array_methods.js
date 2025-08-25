@@ -104,12 +104,27 @@
 // explainParseInt("42px");
 
 // explainParseInt("3.14");
-function explainParseFloat(value) {
-  console.log("Original Value:", value);
-  let result = parseFloat(value);
-  console.log("After parseFloat:", result);
-}
+// function explainParseFloat(value) {
+//   console.log("Original Value:", value);
+//   let result = parseFloat(value);
+//   console.log("After parseFloat:", result);
+// }
  
-explainParseFloat("3.14");
+// explainParseFloat("3.14");
 
-explainParseFloat("42");
+// explainParseFloat("42");
+
+
+function fetchData(url) {
+  console.log("Fetching data from URL:", url);
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      console.log("Fetched Data:", data.title);
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+}   
+
+fetchData("https://jsonplaceholder.typicode.com/todos/1");
