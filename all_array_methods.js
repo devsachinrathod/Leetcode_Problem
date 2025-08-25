@@ -93,10 +93,23 @@
 // // The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
 // Example Usage for parseInt
-function explainParseInt(value) {
+// function explainParseInt(value) {
+//   console.log("Original Value:", value);
+//   let result = parseInt(value);
+//   console.log("After parseInt:", result);
+// }
+// explainParseInt("11sachin23.45");
+// explainParseInt("42");
+
+// explainParseInt("42px");
+
+// explainParseInt("3.14");
+function explainParseFloat(value) {
   console.log("Original Value:", value);
-  let result = parseInt(value);
-  console.log("After parseInt:", result);
+  let result = parseFloat(value);
+  console.log("After parseFloat:", result);
 }
-explainParseInt("11sachin23.45");
-explainParseInt("42");
+ 
+explainParseFloat("3.14");
+
+explainParseFloat("42");
