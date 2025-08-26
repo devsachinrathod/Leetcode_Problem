@@ -115,16 +115,34 @@
 // explainParseFloat("42");
 
 
-function fetchData(url) {
-  console.log("Fetching data from URL:", url);
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      console.log("Fetched Data:", data.title);
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
-}   
+// function fetchData(url) {
+//   console.log("Fetching data from URL:", url);
+//   fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log("Fetched Data:", data.title);
+//     })
+//     .catch(error => {
+//       console.error("Error fetching data:", error);
+//     });
+// }   
 
-fetchData("https://jsonplaceholder.typicode.com/todos/1");
+// fetchData("https://jsonplaceholder.typicode.com/todos/1");
+
+ 
+
+let arr = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+        console.log(arr[i], arr[j]);
+    }
+}
+
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+        for (let k = 0; k < arr.length; k++) {
+            console.log(arr[i], arr[j], arr[k]);
+        }
+    }
+}
