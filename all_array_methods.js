@@ -109,7 +109,7 @@
 //   let result = parseFloat(value);
 //   console.log("After parseFloat:", result);
 // }
- 
+
 // explainParseFloat("3.14");
 
 // explainParseFloat("42");
@@ -129,20 +129,62 @@
 
 // fetchData("https://jsonplaceholder.typicode.com/todos/1");
 
- 
 
-let arr = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-        console.log(arr[i], arr[j]);
-    }
-}
+// let arr = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-        for (let k = 0; k < arr.length; k++) {
-            console.log(arr[i], arr[j], arr[k]);
-        }
-    }
-}
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//         console.log(arr[i], arr[j]);
+//     }
+// }
+
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//         for (let k = 0; k < arr.length; k++) {
+//             console.log(arr[i], arr[j], arr[k]);
+//         }
+//     }
+// }
+
+
+// for(let i =1; i<=20; i++){
+//     console.log(i);
+// }
+
+// Print only even numbers between 1 and 50.
+
+// for(let i =1; i<=50; i++){
+//     if(i%2==0){
+//         console.log(i);
+//     }
+// }
+// Print the multiplication table of 7
+
+
+// }
+
+// for(let i =1; i<=10; i++){
+//     console.log(7*i);
+// }
+
+// for(let i =10; i>=1; i--){
+//     console.log(i);
+// }
+
+// sum of 10 natural numbers
+// let sum = 0;
+// for (let i = 1; i <= 10; i++) {
+//     sum = + i;
+// }
+// console.log(sum);
+
+// for( let i = 1; i <= 100; i++){
+// if( i%2 == 0){
+//     console.log(i);
+// }
+// }    
+
+// Hey there! My name is Umesh Yadav, I hail from a small village in New Delhi. I've graduated from IIT Jammu with Bachelors in CSE. Had a really great (2 + 2i years) time there :) 
+// I currently work as a Software Engineer at Microsoft (Azure Core) with 1.5+ YOE in SWE roles.
+// Curious by Nature, I learnt coding with aim to solve problems and build things, still enjoy it. I love to explore new things and got a chance to work as a Treasurer, Administrator, Group Head and Policy Maker in my college to enhance my Leadership and Management skills. In my free time, I read self-help/ non-fiction books, listen to music, relax/ chill by watching web series. I also enjoy automating boring stuff :)
