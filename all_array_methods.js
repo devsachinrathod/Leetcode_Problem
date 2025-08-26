@@ -185,6 +185,18 @@
 // }
 // }    
 
+
+function fetchdata(callback){
+    setTimeout(() => {
+        let data = {name: "sachin", age: 24};
+        callback(data);
+    }, 2000);
+}
+fetchdata((darsutta)=>{
+    console.log("Fetched Data:", darsutta);
+})
+
+console.log("Start");
 // Hey there! My name is Umesh Yadav, I hail from a small village in New Delhi. I've graduated from IIT Jammu with Bachelors in CSE. Had a really great (2 + 2i years) time there :) 
 // I currently work as a Software Engineer at Microsoft (Azure Core) with 1.5+ YOE in SWE roles.
 // Curious by Nature, I learnt coding with aim to solve problems and build things, still enjoy it. I love to explore new things and got a chance to work as a Treasurer, Administrator, Group Head and Policy Maker in my college to enhance my Leadership and Management skills. In my free time, I read self-help/ non-fiction books, listen to music, relax/ chill by watching web series. I also enjoy automating boring stuff :)
