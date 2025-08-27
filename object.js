@@ -28,6 +28,8 @@
 // };
 
 // objectMethods(sampleObject);
+
+
 function mathMethods(value) {
   console.log("Original Value:", value);
 

@@ -4,35 +4,25 @@
 
 // Return k after placing the final result in the first k slots of nums.
 
-// // Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+// Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
-// var removeDuplicates = function(nums) {
-//     let n = nums.length;
-//     if (n <= 2) return n;
+var removeDuplicates = function(nums) {
+    let n = nums.length;
+    if (n <= 2) return n;
     
-//     let i = 2; // pointer to place next valid element
+    let i = 2; // pointer to place next valid element
     
-//     for (let j = 2; j < n; j++) {
-//         if (nums[j] !== nums[i - 2]) {
-//             nums[i] = nums[j];
-//             i++;
-//         }
-//     }
-    
-//     return i;
-// };
-
-// // Example usage:
-// let nums = [0,0,1,1,1,1,2,3,3];
-// let k = removeDuplicates(nums);     
-// console.log("Length after removing duplicates:", k); // Output: 7
-
-// nest for lop
-
-for (let i = 0; i < 5; i++) {
-    for (let j = 0; j < 3; j++) {
-        console.log(`i: ${i}, j: ${j}`);
+    for (let j = 2; j < n; j++) {
+        if (nums[j] !== nums[i - 2]) {
+            nums[i] = nums[j];
+            i++;
+        }
     }
-}
-// Output:
-// i: 0, j: 0
+    
+    return i;
+};
+
+// Example usage:
+let nums = [0,0,1,1,1,1,2,3,3];
+let k = removeDuplicates(nums);     
+console.log("Length after removing duplicates:", k); // Output: 7
