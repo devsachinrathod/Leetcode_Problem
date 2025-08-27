@@ -25,3 +25,4 @@ const anotherString = function (key, value) {
     }
     return value;
 }
+

@@ -67,15 +67,16 @@
 // // },2000);
 
 // // // filter method
-// // let mixedNumbers = [1, -2, 3, -4, 5, -6];
+let mixedNumbers = [1, -2, 3, -4, 5, -6];
 
-// // function filterPositive(arr) {
-// //     return arr.filter(function(num) {
-// //         return num > 0;
-// //     });
-// // }
-// // let positives = filterPositive(mixedNumbers);
-// // console.log("Positive Numbers:", positives);
+function filterPositive(arr) {
+    return arr.filter(function(num) {
+        return num > 0 || num< 0;
+
+    });
+}
+let positives = filterPositive(mixedNumbers);
+console.log("Positive Numbers:", positives);
 
 // // // reduce method
 
