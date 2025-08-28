@@ -48,3 +48,7 @@ function printHello(num){
   }
 }
 printHello(23);  
+
+()=>{
+  console.log("hello world");
+}
