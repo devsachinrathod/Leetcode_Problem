@@ -47,7 +47,7 @@ function printHello(num){
    console.log("hello world",i);
   }
 }
-printHello(23);  
+printHello([3,4,4]);  
 
 ()=>{
   console.log("hello world");

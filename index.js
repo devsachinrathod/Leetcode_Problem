@@ -1,6 +1,8 @@
 var addBinary = function(a, b) {
+        console.log(a.length);
     let i = a.length - 1;
     let j = b.length - 1;
+    console.log(i);
     let carry = 0;
     let arr = [];
 
@@ -20,4 +22,4 @@ var addBinary = function(a, b) {
     return arr.reverse().join('');
 };
 
-console.log(addBinary('11', '11')); // Output: "100"
+console.log(addBinary('11', '113')); // Output: "100"
