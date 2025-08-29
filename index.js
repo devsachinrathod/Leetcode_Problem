@@ -1,25 +1,34 @@
-var addBinary = function(a, b) {
-        console.log(a.length);
-    let i = a.length - 1;
-    let j = b.length - 1;
-    console.log(i);
-    let carry = 0;
-    let arr = [];
+// var addBinary = function(a, b) {
+//         console.log(a.length);
+//     let i = a.length - 1;
+//     let j = b.length - 1;
+//     console.log(i);
+//     let carry = 0;
+//     let arr = [];
 
-    while (i >= 0 || j >= 0 || carry === 1) {
-        let sum = carry;
+//     while (i >= 0 || j >= 0 || carry === 1) {
+//         let sum = carry;
         
-        if (i >= 0) sum += a.charAt(i) - '0';
-        if (j >= 0) sum += b.charAt(j) - '0';
+//         if (i >= 0) sum += a.charAt(i) - '0';
+//         if (j >= 0) sum += b.charAt(j) - '0';
         
-        arr.push(sum % 2);
-        carry = Math.floor(sum / 2);
+//         arr.push(sum % 2);
+//         carry = Math.floor(sum / 2);
 
-        i--;
-        j--;
-    }
+//         i--;
+//         j--;
+//     }
     
-    return arr.reverse().join('');
-};
+//     return arr.reverse().join('');
+// };
 
-console.log(addBinary('11', '113')); // Output: "100"
+// console.log(addBinary('11', '113')); // Output: "100"
+const fs = require("fs");
+
+fs.readFile("sample.txt", "utf8", (err, data) => {
+  if (err) {
+    console.error("Error reading file:", err);
+    return;
+  }
+  console.log("File contents:\n", data);
+});
