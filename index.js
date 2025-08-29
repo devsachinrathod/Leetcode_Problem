@@ -1,34 +1,35 @@
-// var addBinary = function(a, b) {
-//         console.log(a.length);
-//     let i = a.length - 1;
-//     let j = b.length - 1;
-//     console.log(i);
-//     let carry = 0;
-//     let arr = [];
+// // Import file system module
+// const fs = require("fs");
 
-//     while (i >= 0 || j >= 0 || carry === 1) {
-//         let sum = carry;
-        
-//         if (i >= 0) sum += a.charAt(i) - '0';
-//         if (j >= 0) sum += b.charAt(j) - '0';
-        
-//         arr.push(sum % 2);
-//         carry = Math.floor(sum / 2);
+// // Asynchronous file read
+// fs.readFile("sample.txt", "utf8", (err, data) => {
+//   if (err) {
+//     console.error("Error reading file:", err);
+//     return;
+//   }
+//   console.log("File contents:\n", data);
+// });
 
-//         i--;
-//         j--;
-//     }
+// // Expensive synchronous operation
+// let sum = 0;
+// for (let i = 0; i < 1e9; i++) {  // Try 1e7, 1e8, 1e9
+//   sum += i;
+// }
+// console.log("Expensive operation finished. Sum =", sum);
+/*
+    Write a function that returns a promise that resolves after n seconds have passed, where n is passed as an argument to the function.
+*/
+
+function wait(n){
+  return  new Promise ((resolve)=>{
+    setInterval(()=>{
+resolve("this resolved");
+    },n*1000)
     
-//     return arr.reverse().join('');
-// };
+  })
 
-// console.log(addBinary('11', '113')); // Output: "100"
-const fs = require("fs");
-
-fs.readFile("sample.txt", "utf8", (err, data) => {
-  if (err) {
-    console.error("Error reading file:", err);
-    return;
-  }
-  console.log("File contents:\n", data);
+}
+let rsukt = wait(2).then((result) => {
+  console.log(result);
 });
+console.log(rsukt);
