@@ -9,19 +9,18 @@
 
 // }
 // let rsukt = wait();
-
-function wait(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+function printHello() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("f1");
+      resolve(); // signal that f1 is done
+    }, 2000);
+  });
 }
 
-async function printHello() {
-  while (true) {
-    console.log("hello world");
-    await wait(5000); // waits 5 seconds
-  }
+async function main() {
+  await printHello();   // wait until f1 is done
+  console.log("f2");    // then run f2
 }
 
-printHello().then(()=>{
-console.log("second");
-
-});
+main();
