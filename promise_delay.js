@@ -32,7 +32,16 @@ function printUsingLoop(){
     },2000)
   })
 }
-console.log("start");
-printUsingLoop().then((result)=>{
-  console.log("all done", result);
-})
+// console.log("start");
+// printUsingLoop().then((result)=>{
+//   console.log("all done", result);
+// })
+ 
+async function f1(result){
+  await printUsingLoop().then((rea)=>{
+console.log("data is fetched", rea);
+  });
+  
+}
+
+f1();
