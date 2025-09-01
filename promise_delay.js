@@ -48,15 +48,29 @@
 
 // Each function returns a promise that resolves after given seconds
 function wait1(t) {
-  return new Promise((resolve) => setTimeout(resolve, t * 1000));
+  return new Promise((resolve) =>{
+  setTimeout(()=>{
+    console.log("Wait1 Resolve");
+    resolve("resolve");
+  },t*1000);
+  });
 }
 
 function wait2(t) {
-  return new Promise((resolve) => setTimeout(resolve, t * 1000));
+  return new Promise((resolve) =>{
+  setTimeout(()=>{
+    console.log("Wait2 Resolve");
+    resolve("resolve");
+  },t*1000);
+  });
 }
-
 function wait3(t) {
-  return new Promise((resolve) => setTimeout(resolve, t * 1000));
+  return new Promise((resolve) =>{
+  setTimeout(()=>{
+    console.log("Wait3 Resolve");
+    resolve("resolve");
+  },t*1000);
+  });
 }
 
 // Sequentially call wait1, wait2, wait3 and return total time in ms
@@ -69,4 +83,8 @@ function calculateTime(t1, t2, t3) {
     .then(() => Date.now() - start); // total time in ms
 }
 
-module.exports = calculateTime;
+
+function exPOrts(){
+  console.log("promise-all function");
+}
+module.exports = {exPOrts, calculateTime};
