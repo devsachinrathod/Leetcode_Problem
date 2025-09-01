@@ -9,18 +9,30 @@
 
 // }
 // let rsukt = wait();
-function printHello() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log("f1");
-      resolve(); // signal that f1 is done
-    }, 2000);
-  });
-}
+// function printHello() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("f1");
+//       resolve(); // signal that f1 is done
+//     }, 2000);
+//   });
+// }
 
-async function main() {
-  await printHello();   // wait until f1 is done
-  console.log("f2");    // then run f2
-}
+// async function main() {
+//   await printHello();   // wait until f1 is done
+//   console.log("f2");    // then run f2
+// }
 
-main();
+// main();
+
+function printUsingLoop(){
+  return new Promise((resolve)=>{
+    setTimeout(()=>{
+      resolve("Fetch data");
+    },2000)
+  })
+}
+console.log("start");
+printUsingLoop().then((result)=>{
+  console.log("all done", result);
+})
