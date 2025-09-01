@@ -26,7 +26,7 @@
 // let nums = [0,0,1,1,1,1,2,3,3];
 // let k = removeDuplicates(nums);     
 // console.log("Length after removing duplicates:", k); // Output: 7
-const {calculateTime, exPOrts} = require('./promise_delay');
-
+const {calculateTime, exPOrts ,callFuncall} = require('./promise_delay');
+callFuncall();
 calculateTime(2,3,4);
 exPOrts();

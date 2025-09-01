@@ -86,5 +86,16 @@ function calculateTime(t1, t2, t3) {
 
 function exPOrts(){
   console.log("promise-all function");
+
+
 }
-module.exports = {exPOrts, calculateTime};
+function callFuncall(callback){
+  setTimeout(()=>{
+    console.log("callback function call");
+    callback();
+  }, 5000)
+}
+callFuncall(()=>{
+  console.log("This called Fuction");
+})
+module.exports = {exPOrts, calculateTime,callFuncall};
