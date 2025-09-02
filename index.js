@@ -52,7 +52,7 @@ function bestDivision(index, b, c, arr, n) {
     let new_b = [...b];
     new_b.push(arr[index]);
     let res1 = bestDivision(index + 1, new_b, c, arr, n);
-
+    
     // Case 2: put element in c
     let new_c = [...c];
     new_c.push(arr[index]);

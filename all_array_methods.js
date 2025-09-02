@@ -194,3 +194,41 @@
 //  Umesh Yadav, I hail from a small village in New Delhi. I've graduated from IIT Jammu with Bachelors in CSE. Had a really great (2 + 2i years) time there :) 
 // I currently work as a Software Engineer at Microsoft (Azure Core) with 1.5+ YOE in SWE roles.
 // Curious by Nature, I learnt coding with aim to solve problems and build things, still enjoy it. I love to explore new things and got a chance to work as a Treasurer, Administrator, Group Head and Policy Maker in my college to enhance my Leadership and Management skills. In my free time, I read self-help/ non-fiction books, listen to music, relax/ chill by watching web series. I also enjoy automating boring stuff :)
+/*
+ * Write 3 different functions that return promises that resolve after t1, t2, and t3 seconds respectively.
+ * Write a function that sequentially calls all 3 of these functions in order.
+ * Return a promise chain which return the time in milliseconds it takes to complete the entire operation.
+ * Compare it with the results from 3-promise-all.js
+ */
+
+function wait1(t) {
+  return new Promise((resolve)=>{
+    setTimeout(() => {
+        resolve("This function gets resolve")
+    }, t * 1000);
+  })
+}
+
+function wait2(t) {
+  return new Promise((resolve)=>{
+   setTimeout(() => {
+     resolve("This is also get resolve");
+   }, t*1000);
+  })
+}
+
+function wait3(t) {
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+            resolve("this also get resolve");
+        }, t*1000);
+    })
+
+}
+
+function calculateTime(t1, t2, t3) {
+  const arr=[wait1(t1),wait2(t2), wait3(t3)];
+  console.log(arr);
+}
+calculateTime(2,4,3);
+module.exports = calculateTime;
