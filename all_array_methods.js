@@ -202,33 +202,47 @@
  */
 
 function wait1(t) {
-  return new Promise((resolve)=>{
+  return new Promise((resolve) => {
     setTimeout(() => {
-        resolve("This function gets resolve")
+      resolve("wait1 resolved");
     }, t * 1000);
-  })
+  });
 }
 
 function wait2(t) {
-  return new Promise((resolve)=>{
-   setTimeout(() => {
-     resolve("This is also get resolve");
-   }, t*1000);
-  })
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("wait2 resolved");
+    }, t * 1000);
+  });
 }
 
 function wait3(t) {
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            resolve("this also get resolve");
-        }, t*1000);
-    })
-
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("wait3 resolved");
+    }, t * 1000);
+  });
 }
 
 function calculateTime(t1, t2, t3) {
-  const arr=[wait1(t1),wait2(t2), wait3(t3)];
-  console.log(arr);
+  const start = Date.now();
+
+  return wait1(t1)
+    .then(() => wait2(t2))
+    .then(() => wait3(t3))
+    .then(() => {
+      const end = Date.now();
+      return end - start; // total time in ms
+    });
 }
-calculateTime(2,4,3);
+
+// usage
+calculateTime(2, 4, 3).then((time) => {
+  const extacttime = time / 1000;
+  console.log("Total time taken:", extacttime, "ms");
+});
+
 module.exports = calculateTime;
+
+
