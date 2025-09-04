@@ -32,8 +32,19 @@
 // }
 
 // getInputasString("sachin");
-function trimString(str) {
-    console.log("Original String:", str);
-    console.log("After trim:", str.trim());
+// function trimString(str) {
+//     console.log("Original String:", str);
+//     console.log("After trim:", str.trim());
+// }
+// trimString("     Hello World ");
+
+let obj = {
+    name:"sachin rathod",
+    class:"tyBCA",
+    college:"SRTMU"
 }
-trimString("     Hello World ");
+
+function mapObj(){
+    console.log(mapObj);
+}
+mapObj();
