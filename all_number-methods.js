@@ -38,13 +38,3 @@
 // }
 // trimString("     Hello World ");
 
-let obj = {
-    name:"sachin rathod",
-    class:"tyBCA",
-    college:"SRTMU"
-}
-
-function mapObj(){
-    console.log(mapObj);
-}
-mapObj();
