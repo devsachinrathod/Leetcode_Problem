@@ -52,3 +52,9 @@ printHello([3,4,4]);
 ()=>{
   console.log("hello world");
 }
+
+function rety(str){
+  console.log(str.json());
+}
+
+rety("sac");
