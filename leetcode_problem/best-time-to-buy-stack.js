@@ -12,4 +12,3 @@ function maxProfit(prices) {
 
     return maxProfit;
 }
-consple.log("rathod");
