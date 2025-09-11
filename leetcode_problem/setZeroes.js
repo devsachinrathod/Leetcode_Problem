@@ -2,6 +2,8 @@ function setZeroes(matrix) {
   let rows = matrix.length;
   let cols = matrix[0].length;
 
+  console.log(cols);
+
   let firstRowZero = false;
   let firstColZero = false;
 
@@ -54,4 +56,8 @@ function setZeroes(matrix) {
     }
   }
 }
+
+setZeroes([1, 1, 1],
+  [1, 0, 1],
+  [1, 1, 1]);
 
