@@ -7,7 +7,6 @@ function setZeroes(matrix) {
   let firstRowZero = false;
   let firstColZero = false;
 
-  // 1. Check if first row needs to be zero
   for (let j = 0; j < cols; j++) {
     if (matrix[0][j] === 0) {
       firstRowZero = true;
@@ -15,7 +14,6 @@ function setZeroes(matrix) {
     }
   }
 
-  // 2. Check if first column needs to be zero
   for (let i = 0; i < rows; i++) {
     if (matrix[i][0] === 0) {
       firstColZero = true;

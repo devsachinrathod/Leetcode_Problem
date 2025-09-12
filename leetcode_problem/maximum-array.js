@@ -1,7 +1,6 @@
 function findMaxAverage(nums, k) {
     let windowSum = 0;
     
-    // Calculate initial sum of the first window of size k
     for (let i = 0; i < k; i++) {
         windowSum += nums[i];
     }

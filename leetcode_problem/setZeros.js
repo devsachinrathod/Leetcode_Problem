@@ -11,8 +11,14 @@ var moveZeroes = function(nums) {
         }
     }
 
+
+    console.log("this the ...:",...nonZeros);
+    console.log(nonZeros);
+    let com = zeros + nonZeros;
+    console.log(com);
+    
     // Combine them
-    let fullArr = [...nonZeros, ...zeros];
+    let fullArr = [...nonZeros,...zeros];
     console.log("thisss",fullArr)
     // Modify the original array in-place
     for (let i = 0; i < nums.length; i++) {
