@@ -9,6 +9,7 @@ function generateRandomUserId() {
   return Math.floor(Math.random() * 1000000).toString();
 }
 
+console.log(numberOfRequestsForUser);
 // Reset request counts every second
 setInterval(() => {
   for (let userId in numberOfRequestsForUser) {
