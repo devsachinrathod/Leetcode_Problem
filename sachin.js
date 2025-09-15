@@ -43,24 +43,38 @@
 // }
 
 function calculateElectricity(bill) {
-  let highestBillMonth = bill[0];
-  let lowestBillmonth = bill[0];
-  let n = bill.length;
+    let highestBillMonth = bill[0];
+    let lowestBillmonth = bill[0];
+    let allcal = 0;
+    let n = bill.length;
 
-  for (let j = 0; j < n; j++) {
-    if (bill[j] < lowestBillmonth) {
-      lowestBillmonth = bill[j];
+    for (let j = 0; j < n; j++) {
+        allcal += bill[j];
+        if (bill[j] < lowestBillmonth) {
+            lowestBillmonth = bill[j];
+        }
     }
-  }
 
-  for (let i = 0; i < n; i++) {
-    if (bill[i] > highestBillMonth) {
-      highestBillMonth = bill[i];
+    for (let i = 0; i < n; i++) {
+        if (bill[i] > highestBillMonth) {
+            highestBillMonth = bill[i];
+        }
     }
-  }
 
-  return { highestBillMonth, lowestBillmonth };
+    return { highestBillMonth, lowestBillmonth, allcal };
 }
 
 const arr = [120, 145.4, 1500, 3000, 1800, 5000];
 console.log(calculateElectricity(arr));
+
+
+function calcultePower(num, power) {
+    let result = 1;
+
+    for (let i = 1; i <= power; i++) {
+        console.log(power[i])
+       result *= power
+    }
+    return result;
+}
+console.log(calcultePower(5, 5));
