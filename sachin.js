@@ -70,10 +70,8 @@ console.log(calculateElectricity(arr));
 
 function calcultePower(num, power) {
     let result = 1;
-
     for (let i = 1; i <= power; i++) {
-        console.log(power[i])
-       result *= power
+       result *= num;
     }
     return result;
 }
