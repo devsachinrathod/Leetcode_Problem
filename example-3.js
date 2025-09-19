@@ -13,6 +13,13 @@ function Example_3() {
         { name: "Empathy",      description: "Understands and cares about others' feelings.", score: 8 },
         { name: "Adaptability", description: "Can adjust easily to new situations.", score: 7 }
     ];
+ let count = 0;
+    for(let j = 0; j<qualityArr.length; j++){
+        console.log(count++);
+        for(let k =0; k<qualityArr.length; k++){
+            console.log(qualityArr[k].name);
+        }
+    }
 
     // Pick random name and random quality
     let randomName = arr[Math.floor(Math.random() * arr.length)];
@@ -30,10 +37,10 @@ function Example_3() {
         return 7;
     } else {
         console.log(`${randomName} is Improving in ${randomQuality.name}`);
+         console.log(`${randomName} is Improving in ${randomQuality.name}`);
         return 5;
     }
 }
-
 function printValues(num) {
     let i = 1; 
     while (i <= num) {
