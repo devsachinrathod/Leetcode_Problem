@@ -14,12 +14,3 @@ function findingINGwords(verbList) {
 
 console.log(findingINGwords(["runing ", "walking", "sachin", "popletwar"]));
 
-// let arr = ["runing ", "walking"];
-// let name =  "achib"
-// console.log(name.slice());
-// console.log(name, name.length);
-// console.log(name, name.length);
-
-// let strigify = arr.slice();
-// console.log(strigify);
-// console.log(arr.length);
