@@ -30,19 +30,39 @@
 // console.log(realBackTracking(step));
 
 
-function realBackTracking(foots, index = 0, calculateHighestStep = []) {
-    // base case: when we reach the end
-    if (index === foots.length) {
-        return calculateHighestStep;
+// function realBackTracking(foots, index = 0, calculateHighestStep = []) {
+//     // base case: when we reach the end
+//     if (index === foots.length) {
+//         return calculateHighestStep;
+//     }
+//     // check and push
+//     if (foots[index] > calculateHighestStep[0] || calculateHighestStep.length === 0) {
+//         calculateHighestStep[0] = foots[index];
+//     }
+//     // recursive call
+//     return realBackTracking(foots, index + 1, calculateHighestStep);
+// }
+// let step = [21, 2, 4, 6, 8, 67];
+// console.log("Highest Step:", realBackTracking(step)[0]);
+function findPaths(row, col, n, m, path, result) {
+    if (row === n - 1 && col === m - 1) {
+        result.push([...path]); // save path copy
+        return;
     }
 
-    // check and push
-    if (foots[index] > calculateHighestStep[0] || calculateHighestStep.length === 0) {
-        calculateHighestStep[0] = foots[index];
+    if (row + 1 < n) {
+        path.push("D");
+        findPaths(row + 1, col, n, m, path, result);
+        path.pop();
     }
 
-    // recursive call
-    return realBackTracking(foots, index + 1, calculateHighestStep);
+    if (col + 1 < m) {
+        path.push("R");
+        findPaths(row, col + 1, n, m, path, result);
+        path.pop();
+    }
 }
-let step = [21, 2, 4, 6, 8, 67];
-console.log("Highest Step:", realBackTracking(step)[0]);
+
+let result = [];
+findPaths(0, 0, 2, 2, [], result);
+console.log("All Paths:", result);
